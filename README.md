@@ -1,73 +1,116 @@
-# Financial-Market-Dynamics-Using-Linear-Algebra
-This project analyzes how market stress spreads across interconnected banks using Linear Algebra and Python. It models bank connections, studies system stability, identifies risky and stable market situations, and visualizes how stress propagates over time through simulations.
 # How Market Shocks Travel Through the Banking System
 
 ## Overview
-This project studies how market stress spreads across interconnected banks using Linear Algebra and Python. Instead of analyzing banks individually, the banking system is modeled as a network where connections between banks influence how stress propagates during economic turbulence.
+This project examines how **market stress propagates through an interconnected banking system** using concepts from **Linear Algebra** and **system-level modeling**.  
+Instead of analyzing banks in isolation, the banking sector is represented as a **network**, where financial interconnections influence how shocks spread during periods of economic instability.
 
-The project focuses on understanding system behavior, risk patterns, and stability in a clear and visual way. It is designed to be understandable even for readers without a strong mathematics or finance background.
+The focus is on understanding **system behavior, risk patterns, and stability** in a simplified and intuitive manner.
+
+---
+
+## Motivation
+Modern financial systems are highly interconnected.  
+A shock affecting one institution can quickly spread to others, amplifying systemic risk.
+
+This project aims to demonstrate how mathematical modeling helps:
+- Capture financial contagion effects
+- Identify vulnerable institutions
+- Understand stability at a system-wide level
 
 ---
 
 ## Objectives
-- Represent bank interconnections using a matrix-based model  
-- Study system stability using matrix properties  
-- Identify high-risk and low-risk market situations  
-- Analyze how market stress spreads over time  
-- Explain financial system behavior using simple visuals  
+- Model inter-bank relationships using matrix-based representations  
+- Analyze stability using fundamental matrix properties  
+- Study how external market stress impacts connected banks  
+- Identify risky and stable market conditions  
+- Communicate insights in a clear, non-technical way  
 
 ---
 
 ## Problem Statement
-Banks are connected through lending, investments, and market activities. Because of these connections, financial stress does not remain limited to one bank and can spread across the entire system.
+Banks are linked through lending, borrowing, and other financial exposures.  
+Due to these interdependencies, stress originating in one bank can propagate through the entire system.
 
-This project aims to understand:
-- How stress propagates across connected banks  
-- Which banks experience stronger pressure  
-- Which market situations are more dangerous for the system  
+This project seeks to understand:
+- How stress spreads across the banking network  
+- Which banks are more affected by market shocks  
+- Why system-level analysis is essential for risk assessment  
 
 ---
 
 ## Methodology
 
 ### 1. System Modeling
-- Each bank is represented as a node  
-- Connections between banks are modeled using a square matrix  
-- External market stress is represented using a vector  
-
-### 2. Matrix Analysis
-The following properties are analyzed to understand system behavior:
-- Symmetry (mutual influence between banks)
-- Rank (independent contribution of banks)
-- Determinant (system solvability and stability)
-- Trace (overall internal strength)
-- Null space (whether any shock is ignored)
-
-### 3. System Response
-The system of equations `A × x = b` is solved to observe how banks respond to an external market shock.
-
-### 4. Eigenvalue Analysis
-- Eigenvalues are used to identify stressful and stable market situations  
-- Eigenvectors represent patterns in which banks move together  
-
-### 5. Validation
-The Cayley–Hamilton theorem is verified to ensure mathematical correctness of the model.
-
-### 6. Portfolio Risk Assessment
-A simple investment portfolio is analyzed to check whether it aligns with high-risk system-wide patterns.
-
-### 7. Simulation
-A time-based simulation is performed to visualize how stress spreads across banks over time.
+- Banks are represented as nodes in a financial network  
+- Inter-bank connections are modeled using a square matrix  
+- External market stress is represented as an input vector  
 
 ---
 
-### Bank Connection Matrix
-```python
-import numpy as np
+### 2. Matrix-Based Analysis
+Key matrix properties are examined to assess system behavior:
+- Symmetry  
+- Rank  
+- Determinant  
+- Trace  
+- Null Space  
 
-A = np.array([
-    [2, -1,  0,  0],
-    [-1, 2, -1,  0],
-    [0, -1,  2, -1],
-    [0,  0, -1,  2]
-])
+These properties help evaluate **connectivity, solvability, and stability**.
+
+---
+
+### 3. System Response
+The system behavior is analyzed by studying how banks collectively respond to an external market shock.  
+This helps identify which institutions experience stronger pressure due to network effects.
+
+---
+
+### 4. Eigenvalue Analysis
+- Eigenvalues indicate whether the system behaves in a stable or stressful manner  
+- Eigenvectors reveal collective movement patterns among banks  
+
+This analysis highlights conditions under which market stress may amplify or dissipate.
+
+---
+
+### 5. Stress Propagation Simulation
+A time-based simulation is used to visualize how stress evolves across the banking network, offering insights into dynamic behavior during prolonged market disturbances.
+
+---
+
+## Tools and Technologies
+- Python  
+- Linear Algebra  
+- NumPy  
+- Matplotlib  
+- SymPy  
+
+---
+
+## Key Insights
+- Banks do not respond equally to market stress  
+- Highly connected banks experience greater systemic pressure  
+- Certain market conditions are inherently more unstable  
+- System-level analysis provides deeper risk understanding than isolated evaluation  
+
+---
+
+## Conclusion
+This project demonstrates how **linear algebra and network modeling** can be applied to analyze **financial system stability**.  
+By focusing on interconnections rather than individual institutions, it provides a clearer understanding of **risk propagation and systemic vulnerability**.
+
+---
+
+## Future Scope
+- Expansion to larger and more complex banking networks  
+- Incorporation of probabilistic market shocks  
+- Use of real-world financial exposure data  
+- Extension toward stress-testing and risk forecasting models  
+
+
+
+
+
+
+
